@@ -1,1 +1,38 @@
 site_name: My Notes
+nav:
+  - Home: index.md
+  - About: about.md
+  - Navigate: navigation.md
+  - Topics:
+      - Topic 1: topic1.md
+      - Topic 2: topic2.md
+  - Contact: contact.md
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - palette.toggle
+  palette:
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        toggle:
+            icon: material/weather-sunny
+            name: Switch to light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        toggle:
+            icon: material/weather-night
+            name: Switch to dark mode
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css
+
+extra_javascript:
+    - js/math.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
