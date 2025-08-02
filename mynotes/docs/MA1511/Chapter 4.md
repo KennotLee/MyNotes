@@ -1,4 +1,5 @@
-	[[Chapter 3]] [[Chapter 5]]
+# Chapter 4
+**Previous:** [Chapter 3](./Chapter%203.md)
 # Vector Fields
 Let $D$ be the region in the 2D space $R^2$. A vector field on $D$ is a vector $\textbf{F}$ of the form:
 $F(x,y) = P(x,y)\textbf{i} + Q(x,y)\textbf{j}$
@@ -44,7 +45,7 @@ It is customary to write
 $\int_{a}^{b}P(x(t),y(t)) \cdot x \prime (t) dt = \int_{c} P dx$
 $\int_{a}^{b}Q(x(t),y(t)) \cdot y \prime (t) dt = \int_{c} Q dy$
 $\int_{c} P \space dx + Q \space dy$
-![[Pasted image 20240918152645.png]]
+![](../Assets/Pasted image 20240918152645.png)
 A  simple closed curve is one that does not cross itself. The positive orientation of a simple closed curve refers to a single counterclockwise traversal of the curve.
 
 If $D$ is the region enclosed by a simple, closed and positively oriented curve $C$, then $\oint_{c}\textbf{F} \cdot d\textbf{r} =\oint_{c} P \space dx + Q \space dy = \iint_{D}(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})$ dA
@@ -66,3 +67,5 @@ The **divergence** of $\textbf{F}$, denoted by div $\textbf{F}$, is a scalar def
  $div \space \textbf{F} = \frac{\partial P}{\partial x}\textbf{i} + \frac{\partial Q}{\partial y} \textbf{j} + \frac{\partial R}{\partial z}\textbf{k}$ 
  We can also write divergence of $\textbf{F}$ as
  $div \space \textbf{F} = \nabla \cdot \textbf{F}$ 
+
+ **Next:** [Chapter 5](./Chapter%205.md)

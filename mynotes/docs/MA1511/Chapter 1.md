@@ -1,5 +1,7 @@
 
-[[Chapter 2]]
+# Chapter 1 
+
+
 # Level curves
 $f(x,y) = k$
 # Tangent planes and Normal Lines
@@ -42,3 +44,7 @@ The maximum / minimum value of $f(x,y)$  subject to the constraint $g(x,y) = 0$ 
 ### $f_{x} = \lambda g_{x}$	
 ### $f_{x}=\lambda g_{y}$
 ## $g(x,y) = 0$
+
+#
+#
+**Next:** [Chapter 2](./Chapter%202.md)

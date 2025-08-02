@@ -1,5 +1,7 @@
 	
-[[Chapter 2]] [[Chapter 4]]
+# Chapter 3
+**Previous:** [Chapter 2](./Chapter%202.md)
+
 # Curves and Motion in Space
 ![[Pasted image 20240908232403.png]]
 A particle moving in 3D space. It's position at $t$ can be described by 3 parametric equations
@@ -64,3 +66,5 @@ with position vector $\textbf{r}(u_0,v_{0})= x_{0}i+ y_{0}j + z_{0}k$ and let $\
 A vector equation of the tangent plane at $P$ to the surface is given by
 $\textbf{r} \cdot \textbf{n} = \pmatrix{x_{0}\\ y_{0}\\ z_{0}} \cdot \textbf{n}$
 where $\textbf{r}  = \pmatrix{x \\ y \\ z}$ is the position vector of any point on the tangent plane.
+
+**Next:** [Chapter 4](./Chapter%204.md)

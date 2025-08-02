@@ -1,7 +1,9 @@
 window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
   },
   svg: {
     fontCache: 'global'
@@ -12,3 +14,4 @@ window.MathJax = {
 document$.subscribe(() => {
     MathJax.typesetPromise()
 })
+

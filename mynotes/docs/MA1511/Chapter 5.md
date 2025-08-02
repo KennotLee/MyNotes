@@ -1,4 +1,5 @@
-[[Chapter 4]]
+# Chapter 5
+**Previous:** [Chapter 4](./Chapter%204.md)
 # Sequences
 1. $\lim\limits_{n\rightarrow \infty} a^{\frac{1}{n}}= 1$
 2. $\lim\limits_{n\rightarrow \infty} n^{\frac{1}{n}}= 1$
@@ -27,3 +28,5 @@ $\sum\limits^{\infty}_{k=0}\frac{f^{(k)}(0)}{k!}(x)^{k}$
 # Taylor polynomial
 Given a function $f$, its polynomial centered at $a$, denoted by $P_n$, is the sum of the first $(n+1)$ terms of its Taylor series $\sum\limits^{\infty}_{k=0}\frac{f^{(k)}(a)}{k!}(x-a)^{k}$
 that is $P_{n}=\sum\limits^{n}_{k=0}\frac{f^{(k)}(a)}{k!}(x-a)^{k}$
+
+**End of Module**

@@ -12,7 +12,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
-    - navigation.instant
+    # - navigation.instant
     - palette.toggle
   palette:
       - media: "(prefers-color-scheme: dark)"
@@ -28,6 +28,7 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - nl2br
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css
