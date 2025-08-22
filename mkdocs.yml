@@ -1,5 +1,6 @@
 site_name: My Notes
-
+site_url: https://kennotlee.github.io/mynotes/
+use_directory_urls: false
 nav:
   - Home: index.md
   - About: about.md
