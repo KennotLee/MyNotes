@@ -1,4 +1,4 @@
 Trying fix this thing
 
 sort of running now
-### [Here](kennotlee.github.io/mynotes)
+### [Here](https://kennotlee.github.io/mynotes/index.html)
