@@ -3,7 +3,7 @@
 **Previous:** [Chapter 2](./Chapter%202.md)
 
 # Curves and Motion in Space
-![[./../assets/Pasted image 20240908232403.png]]
+!()[./../assets/Pasted image 20240908232403.png]
 A particle moving in 3D space. It's position at $t$ can be described by 3 parametric equations
 $x = f(t)$, $y=g(t)$, and $z=h(t)$
 ### Position: $\textbf{r} = \pmatrix{f(t) \\ g(t) \\ h(t)}$
@@ -13,10 +13,10 @@ $x = f(t)$, $y=g(t)$, and $z=h(t)$
 # Tangent Lines
 
 A vector equation of the tangent line to a curve $\textbf{r} = \pmatrix{f(t) \\ g(t) \\ h(t)}$ at the point where $t = t_0$ is 
-$\textbf{r} = \pmatrix{f(t_0) \\ g(t_0) \\ h(t_{0)}} +s\pmatrix{f \prime(t_0)\\ g \prime(t_0) \\ h \prime (t_{0)}}, s \in \textbf{R}$
+$\textbf{r} = \pmatrix{f(t_0) \\ g(t_0) \\ h(t_{0})} +s\pmatrix{f \prime(t_0)\\ g \prime(t_0) \\ h \prime (t_{0})}, s \in \textbf{R}$
 
 # Line segments
-![[./../assets/Pasted image 20240908233416.png]]
+!()[./../assets/Pasted image 20240908233416.png]
 The line segment joining two distinct point $\textit{A}(x_{1}, y_{1}, z_{1})$ and $\textit{B}(x_2,y_2,z_{2})$ has parametric representations:
 $\textbf{r}(t) = (1-t)\pmatrix{x_1\\y_1\\z_{1}}+ t\pmatrix{x_{2}\\ y_{2} \\ z_{2}} = \pmatrix{(1-t)x_{1}+ tx_{2}\\ (1-t)y_{1}+ y_{2}\\(1-t)z_{1}+ tz _2}$
 
@@ -38,7 +38,7 @@ $\textbf{r} = \pmatrix{f(t) \\ g(t) \\ h(t)}, a \leq t \leq b$
 Length L can be obtained with:
 $L = \int_{a}^{b} \sqrt{(f \prime (t))^{2}+(g \prime (t))^{2}+ (h \prime (t))^{2}}\space dt$
 # Line integrals 
-![[./../assets/Pasted image 20240909000424.png]]
+!()[./../assets/Pasted image 20240909000424.png]
 height = $f(x(t), y(t))$
 surface: $z = f(x, y)$
 curve $C$: $x=x(t), y=y(t)$
@@ -56,7 +56,7 @@ Negative orientation corresponds to  decreasing values of $t$
 
 # Parametric surfaces
 $\textbf{r}(u,v)=x(u,v)i + y(u,v)j + z(u,v)k$
-![[./../assets/Pasted image 20240909001150.png]]
+()[./../assets/Pasted image 20240909001150.png]
 for each $u,v$ in D $\textbf{r}(u,v)$ represents a point in space. The points constitute a surface.
 
 Let $P$ be the point on the parametric surface
