@@ -11,7 +11,7 @@ Another example of a vector field is the **gradient field (or gradient vector)**
 Respectively: 	$\nabla f = \frac{\partial f}{\partial x} \textbf{i}  + \frac{\partial f}{\partial y} \textbf{j} + \frac{\partial f}{\partial z} \textbf{k}$
 # Line integrals of Vector fields
 Given a curve $C: r(t), a\leq r \leq b$ and a vector field $\textbf{F}$ representing a force, both in the same space, we would like to calculate the total work done by $\textbf{F}$ a particle along the curve $C$ from the point $t=a$ (**initial point**) to the point $t=b$ (**terminal point**).
-![[Pasted image 20240917182454.png]]
+![[./../assets/Pasted image 20240917182454.png]]
 work done, called *the line integral of $F$ along $C$* and denoted by:
 $\int_{C}\textbf{F}\cdot d\textbf{r} = \int_{a}^{b} \textbf{F}(r(t)) \cdot \textbf{r}\prime(t) dt = \int_{a}^{b}P(x(t),y(t)) \cdot x \prime (t) +Q(x(t), y(t)) y \prime (t)dt$
 
