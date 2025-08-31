@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					}
 					// Create <img> element
 					const img = document.createElement('img');
-					img.src = 'assets/' + match[1]; // Adjust path if needed
+					img.src = './../assets/' + match[1]; // Adjust path if needed
 					img.alt = match[1];
 					frag.appendChild(img);
 					lastIndex = obsidianImgRegex.lastIndex;
