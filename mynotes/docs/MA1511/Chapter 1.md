@@ -23,18 +23,18 @@ In some open subset of D containing (a, b) for all (x, y):
 | ------------- | ------------------------- |
 | Local Maximum | $f_x(a , b) \geq f(x, y)$ |
 | Local Minimum | $f_y(a, b) \geq f(x, y)$  |
-#### If f has a local maximum / minimum at a point (a, b) of its domain, then
-###  $f_x(a, b) = 0$ and $f_y(a,b) = 0$
 
+**If f has a local maximum / minimum at a point (a, b) of its domain, then**
+ $\huge f_x(a, b) = 0 \text{ and } f_y(a,b) = 0$
+ 
 $f(x, y)$ has a critical point at $(a, b)$ if $f_x (a, b) = 0$ and $f_y (a, b) = 0$
 
 ## Derivative Test
-### $D = f_{xx}(a, b) \cdot f_{yy}(a,b) - (f_{xy}(a,b))^2$
+$\huge D = f_{xx}(a, b) \cdot f_{yy}(a,b) - (f_{xy}(a,b))^2$ 
 
-$f$ has a local maximum at $(a, b)$ if $D>0$ and $f_{xx} (a,b) < 0$
-$f$ has a local minimum at $(a, b)$ if $D > 0$ and $f_{xx} (a,b) > 0$
-
-$f$ is neither a local maximum nor minimum at $a,b$ if $D<0$
+>$f$ has a local maximum at $(a, b)$ if $D>0$ and $f_{xx} (a,b) < 0$
+>$f$ has a local minimum at $(a, b)$ if $D > 0$ and $f_{xx} (a,b) > 0$
+>$f$ is neither a local maximum nor minimum at $a,b$ if $D<0$
 
 Test is inconclusive if $D=0$
 
