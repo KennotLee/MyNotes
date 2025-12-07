@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kennotlee.github.io/mynotes/MA1512/Chapter%203.html">
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%204.html">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>The Harmonic Oscillator - My Notes</title>
+        <title>Chapter 4 - My Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-harmonic-oscillator" class="md-skip">
+        <a href="#fourier-transform" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Harmonic Oscillator
+              Chapter 4
             
           </span>
         </div>
@@ -527,8 +527,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -537,11 +535,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#non-homogeneous-linear-differential-equations" class="md-nav__link">
+  <a href="#fourier-transform" class="md-nav__link">
     <span class="md-ellipsis">
-      Non homogeneous Linear differential equations
+      Fourier Transform
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Fourier Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dirichlet-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-fourier-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of Fourier Transform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-properties-of-a-real-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectral Properties of a Real Signal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spectral Properties of a Real Signal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xt-is-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(x(t)\) is real:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xt-is-real-and-even" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(x(t)\) is real AND even
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xt-is-real-and-odd" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(x(t)\) is real And odd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-for-fourier-series-coefficients-of-periodic-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results for Fourier series coefficients of periodic signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remarks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -561,41 +643,99 @@
 
 
 
-<h1 id="the-harmonic-oscillator">The Harmonic Oscillator</h1>
-<h2 id="non-homogeneous-linear-differential-equations">Non homogeneous Linear differential equations</h2>
-<p>Consider the non-homogeneous second-order differential equation <span class="arithmatex">\(y\prime\prime + py\prime + qy = f(X)\)</span> where <span class="arithmatex">\(f(x) \neq 0\)</span><br />
-The general solution to this differential equation is given by <br />
-<span class="arithmatex">\(y(x) = y_{h}(x)+y_p(x)\)</span><br />
-Where <span class="arithmatex">\(y_h(x)\)</span> is the general solution to the complementary homogeneous equation <span class="arithmatex">\(y\prime\prime + py\prime +qy=0\)</span> and <span class="arithmatex">\(y_p(x)\)</span> is any particular solution. When <span class="arithmatex">\(f(x)\)</span> involves simple functions, we can attempt to 'guess' <span class="arithmatex">\(y_p(x)\)</span> by the method of undetermined coefficients<br />
-- If f(x) is a polynomial of degree <span class="arithmatex">\(n\)</span>, we let  <span class="arithmatex">\(y_p\)</span> be an arbitrary <span class="arithmatex">\(n\)</span>th degree polynomial with undetermined coefficient<br />
-- If f(x) contains an exponential <span class="arithmatex">\(e^kx\)</span>, then we try <span class="arithmatex">\(y_{p}=Ae^{kx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{R}\)</span> is  an undetermined coefficient<br />
-- if f(x) contains either <span class="arithmatex">\(cos(kx) = \Re(e^{ikx})\)</span> or <span class="arithmatex">\(sin(kx) = \Im(e^{ikx})\)</span>, we can instead solve for the real and imaginary solutions, respectively, of tghe complex equation <span class="arithmatex">\(y\prime\prime + my\prime+n\prime=e^{ikx}\)</span> by trying <span class="arithmatex">\(y_{p}=Ae^{ikx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{C}\)</span> is an undetermined coefficient.<br />
-If any term of the trial solution is already a solution of the complementary equation, multiply the trail solution by <span class="arithmatex">\(x\)</span> <br />
-Given a solution <span class="arithmatex">\(y_{n}(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)\)</span><br />
-<span class="arithmatex">\(y_{p}(x) = u(x)y_{1}(x)+v(x)y_{2}(x)\)</span><br />
-where the functions of <span class="arithmatex">\(u(x)\)</span> and <span class="arithmatex">\(v(x)\)</span> are given by<br />
-<span class="arithmatex">\(u(x)=-\int \frac{y_{2}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span><br />
-<span class="arithmatex">\(v(x)=\int \frac{y_{1}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span></p>
-<h1 id="simple-harmonic-motion">Simple Harmonic Motion</h1>
-<p>A particle is said to be in simple if it acceleration is directly proportional to its displacement<br />
-<span class="arithmatex">\(\ddot{x} = -\omega^{2}x\)</span><br />
-The constant <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the oscillation.<br />
-Consider a damped oscillator in which a resisting force proportional to velocity acts against an oscillating object.</p>
-<p>Consider a damped oscillator in which a resisting force is proportional to velocity acts against an oscillating object.<br />
-<span class="arithmatex">\(\ddot{x}=-\omega^{2}x- 2 \gamma \dot{x}\)</span><br />
-<span class="arithmatex">\(\ddot{x} + \omega^{2}x + 2 \gamma \dot{x} = 0\)</span><br />
-<span class="arithmatex">\(\lambda = \frac{-2\beta \pm \sqrt{4 \gamma - 4\omega^{2}}{2}}= -\gamma \pm \sqrt{\gamma^{2}-\omega^2}\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-omega^2\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-\omega^2\)</span><br />
-- If <span class="arithmatex">\(\omega^{2} &lt; \gamma^{2}\)</span>, we have real roots <span class="arithmatex">\(\lambda_1,\lambda_{2}\in\mathbb{R}\)</span><br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda_{1}t} + c_{2}e^{\lambda_{2}t}\)</span> <br />
-    - Which describes the motion of an overdamped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} = \gamma^{2}\)</span>, we have a repeated real root <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>:<br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda t} + c_{2}te^{\lambda t}\)</span> <br />
-    - This describes a critically damped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} &gt; \gamma^{2}\)</span>, we have a complex conjugate roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta \in \mathbb{C}\)</span><br />
-    - <span class="arithmatex">\(x(t)=c_{1}e^{\lambda t}cos(\beta t) + c_{2}e^{\lambda t}sin(\beta t)\)</span><br />
-    - This describes the motion of an underdamped oscillator</p>
+  <h1>Chapter 4</h1>
+
+<h2 id="fourier-transform">Fourier Transform</h2>
+<ul>
+<li>We have shown that the <em>discrete-frequency spectrum</em> of a <em>periodic signal,</em> <span class="arithmatex">\(x_p(t),\)</span> is given by its <em>complex exponential Fourier series coefficients, <span class="arithmatex">\(c_k\)</span></em></li>
+<li>The Fourier series expansion of an aperiodic signal does not exist. In this case, we make use of another technique called <em>Fourier transform</em> </li>
+<li>The <em>continuous-frequency spectrum</em> of an <em>aperiodic signal,</em> <span class="arithmatex">\(x(t)\)</span>, is given by its <em>Fourier transform,</em> <span class="arithmatex">\(X(f)\)</span></li>
+</ul>
+<p>Forward Fourier Transform (<em>t-domain to f-domain</em>)<br />
+$$<br />
+X(f) = \int_{-\infty}^{\infty} x(t) e^{-j 2 \pi f t} \, dt<br />
+$$<br />
+Inverse Fourier Transform (<em>f-domain to t-domain</em>)<br />
+<span class="arithmatex">\(<span class="arithmatex">\(x(t) = \int_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \, df\)</span>\)</span></p>
+<h3 id="dirichlet-conditions">Dirichlet Conditions</h3>
+<ol>
+<li><span class="arithmatex">\(x(t)\)</span> has only a finite number of maxima and minima in any finite time interval</li>
+<li><span class="arithmatex">\(x(t)\)</span> has only a finite number of discontinuities in any finite time interval</li>
+<li><span class="arithmatex">\(x(t)\)</span> is absolutely integrable <br />
+Conditions 1 and 2 are referred to as the Strong Dirichlet Conditions:</li>
+<li>These conditions are satisfied by all real-world signals of interest. It is not possible to create signals that violate these conditions in a lab<br />
+Condition 3 is referred to as the Weak Dirichlet Condition:</li>
+<li>This condition is satisfied by most <strong>energy</strong> signals and is violated by all <strong>power</strong> signals.</li>
+</ol>
+<h2 id="properties-of-fourier-transform">Properties of Fourier Transform</h2>
+<p>Let <span class="arithmatex">\(\begin{cases} X(f) = \Im\{x(t)\} &amp; \text{denote the Fourier transform of } x(t)  \\ x(t) = \Im^{-1}\{X(f)\} &amp; \text{denote the inverse Fourier tranform of } X(f)\\ x(t) \rightleftarrows X(f) &amp; \text{denote a Fourier transofrm pair with the time-domain on the left-hand side} &amp; \\ &amp; \text{and frequency-domain on the right hand side}\end{cases}\)</span></p>
+<ol>
+<li>Linearity<ul>
+<li>If <span class="arithmatex">\(x(1) \leftrightarrows X_{1}(f)\)</span> and <span class="arithmatex">\(x_{2}(t) \leftrightarrows X_{2}(f)\)</span>: <span class="arithmatex">\(<span class="arithmatex">\(\alpha x_{1}(t)+\beta x_{2} \leftrightarrows \alpha X_{1}(f)+ \beta X_2(f)\)</span>\)</span></li>
+</ul>
+</li>
+<li>Time scaling<ul>
+<li>If <span class="arithmatex">\(x(t) \leftrightarrows X(f)\)</span>: $$<br />
+    x(\beta t) \leftrightarrows \frac{1}{|\beta|}X(\frac{f}{\beta})<br />
+$$</li>
+</ul>
+</li>
+<li>Duality <ul>
+<li>If <span class="arithmatex">\(x(t) \rightleftarrows X(f)\)</span>:<span class="arithmatex">\(<span class="arithmatex">\(X(t) \leftrightarrows x(-f)\)</span>\)</span></li>
+</ul>
+</li>
+<li>Time shifting<ul>
+<li>If <span class="arithmatex">\(x(t) \leftrightarrows X(f)\)</span> <span class="arithmatex">\(<span class="arithmatex">\(x(t-t_{0}) \leftrightarrows X(f)e^{-j2 \pi ft_{0}}\)</span>\)</span></li>
+</ul>
+</li>
+<li>Frequency shifting (Modulation)<ul>
+<li>If <span class="arithmatex">\(x(t) \leftrightarrows X(f)\)</span>: <span class="arithmatex">\(<span class="arithmatex">\(x(t)e^{e j2\pi f_{0}t } \leftrightarrows X(f-f_0)\)</span>\)</span></li>
+</ul>
+</li>
+<li>Differentiation in the Time Domain<ul>
+<li>If <span class="arithmatex">\(x(t) \leftrightarrows X(f)\)</span>:<span class="arithmatex">\(<span class="arithmatex">\(\frac{d}{dt}x(t) \leftrightarrows j2 \pi f \cdot X(f)\)</span>\)</span></li>
+</ul>
+</li>
+<li>Integration in Time Domain<br />
+        - If <span class="arithmatex">\(x(t) \leftrightarrows X(f)\)</span><span class="arithmatex">\(<span class="arithmatex">\(\int^{t}_{\infty} x(\tau)d \tau \leftrightarrows \frac{1}{j2\pi f}X(f)+\frac{1}{2}X(0)\delta(f)\)</span>\)</span></li>
+<li>Convolution in the Time Domain <ul>
+<li>or Multiplication in the Frequency Domain</li>
+<li>If <span class="arithmatex">\(x_{1} \leftrightarrows X_{1}(f)\)</span> and <span class="arithmatex">\(x_{2}(t) \leftrightarrows X_{2}(f)\)</span>:$$\underset{x_{1}(t)\ast x_{2}(t)}{\underbrace{\int^{\infty}<em>{-\infty}x_1(\alpha)x</em>{2}(t-\alpha)d \alpha}}  \leftrightarrows X_{1}(f) X_{2}(f)<br />
+$$</li>
+</ul>
+</li>
+<li>Multiplication in the Time Domain <ul>
+<li>or Convolution in the Frequency Domain</li>
+<li>If <span class="arithmatex">\(x_{1} \rightleftarrows X_{1}(f)\)</span> and <span class="arithmatex">\(x_{2} \leftrightarrows X_{2}(f)\)</span>: <span class="arithmatex">\(<span class="arithmatex">\(x_1(t)x_{2}(t) \leftrightarrows \underset{X_{1}(f) \ast X_{2}(f)}{\underbrace{\int^{\infty}_{-\infty} X_{1}(\alpha) X_{2}(f - \alpha)d \alpha}}\)</span>\)</span></li>
+</ul>
+</li>
+</ol>
+<h2 id="spectral-properties-of-a-real-signal">Spectral Properties of a Real Signal</h2>
+<h3 id="xt-is-real"><span class="arithmatex">\(x(t)\)</span> is real:</h3>
+<p>If <span class="arithmatex">\(\Huge\Bigg[ \underset{x(t)\text{ is real}}{x^{\ast} = x(t)} \Bigg]\)</span>:<br />
+    $$<br />
+    \Huge\Big[ \ \overset{\underbrace{\Huge{X^{\ast}(f)  = X(-f)  }}}{\overset{X(f) \text{ is Confugate Symmetric}}{\overset{\boldsymbol{\downarrow}}{\overbracket{\underset{\text{Even (Symmetry)}}{\underbrace{|X(f| = X(-f)}} \text{ and } \underset{\text{Odd (Anti-symmetry)}}{\underbrace{\angle X(f) = -\angle X(f)}}}}}} \ \big]<br />
+$$</p>
+<h3 id="xt-is-real-and-even"><span class="arithmatex">\(x(t)\)</span> is real AND even</h3>
+<p>If <span class="arithmatex">\(\Big[\ \underset{x(t) \text{ is real}}{\underbrace{x^{\ast}(t) = x(t)}} \text{ and } \underset{x(t) \text{ is even}}{\underbrace{x(-t) = x(t)}}\  \Big]\)</span>:<br />
+<span class="arithmatex">\(<span class="arithmatex">\(\Big[\ \underset{X(f) \text{ is real}}{\underbrace{X^{\ast}(f) = X(f)}} \text{ and } \underset{X(f) \text{ is even}}{\underbrace{X(-f) = X(f)}}\  \Big]\)</span>\)</span></p>
+<h3 id="xt-is-real-and-odd"><span class="arithmatex">\(x(t)\)</span> is real And odd</h3>
+<p>If <span class="arithmatex">\(\Big[\ \underset{x(t) \text{ is real}}{\underbrace{x^{\ast}(t) = x(t)}} \text{ and } \underset{x(t) \text{ is odd}}{\underbrace{x(-t) = -x(t)}}\  \Big]\)</span>:<br />
+<span class="arithmatex">\(<span class="arithmatex">\(\Big[\ \underset{X(f) \text{ is imaginary}}{\underbrace{X^{\ast}(f) = X(f)}} \text{ and } \underset{X(f) \text{ is odd}}{\underbrace{X(-f) = -X(f)}}\  \Big]\)</span>\)</span></p>
+<h3 id="results-for-fourier-series-coefficients-of-periodic-signals">Results for Fourier series coefficients of periodic signals</h3>
+<ul>
+<li><strong><span class="arithmatex">\(x_{p}\)</span> is real:</strong> $$<br />
+\Bigg(\ \underset{\Huge{c_{k} \text{ is Conjugate  Symmetric}}}{\underbrace{c^{\ast}<em>{k} = -c</em>{k}}} \ \ \Bigg|\ \underset{\Huge{\text{Even Symmetry}}}{\underbrace{|c_{k}| = |c_{-k}|}} \ \Bigg| \ \underset{\Huge{\text{Odd Symmetry}}}{\underbrace{\angle c_{k} = \angle c_{-k}}} \Bigg)<br />
+$$</li>
+<li><strong><span class="arithmatex">\(x_p(t)\)</span> is real And even</strong> $$<br />
+\Bigg( \ \underset{\huge{c_{k} \text{is real and even}}}{\underbrace{\overset{Real}{\overbrace{c^{\ast}<em>{k} = c</em>{k}}}\ \ \text{  and  } \ \ \overset{Even}{\overbrace{c_{k}= c_{-k}}}}} \ \bigg)$$</li>
+<li><strong><span class="arithmatex">\(x_{p}(t)\)</span> is real and odd</strong> $$<br />
+\Bigg( \ \underset{\huge{c_{k} \text{is imaginary and odd}}}{\underbrace{\overset{Imaginary}{\overbrace{c^{\ast}<em>{k} = -c</em>{k}}}\ \ \text{  and  } \ \ \overset{Odd}{\overbrace{c_{k}= -c_{-k}}}}} \ \bigg)$$</li>
+</ul>
+<h3 id="remarks">Remarks</h3>
+<ul>
+<li>Either the <em>positive frequency</em> or the <em>negative frequency</em> portion of a spectrum would suffice to specify a real signal completely in the frequency domain because one can be derived from the other through the conjugate symmetry property of the spectrum. <strong>Spectrum analyzers</strong> usually display only the positive frequency portion of a spectrum</li>
+</ul>
 
 
 

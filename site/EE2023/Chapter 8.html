@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kennotlee.github.io/mynotes/MA1512/Chapter%203.html">
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%208.html">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>The Harmonic Oscillator - My Notes</title>
+        <title>Bode Diagrams - My Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-harmonic-oscillator" class="md-skip">
+        <a href="#bode-diagrams" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Harmonic Oscillator
+              Bode Diagrams
             
           </span>
         </div>
@@ -537,11 +537,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#non-homogeneous-linear-differential-equations" class="md-nav__link">
+  <a href="#construction-of-bode-plots" class="md-nav__link">
     <span class="md-ellipsis">
-      Non homogeneous Linear differential equations
+      Construction of Bode Plots
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Construction of Bode Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-transfer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Transfer Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-neither-a-differentiator-nor-integrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with neither a differentiator nor integrator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-a-differentiator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with a differentiator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-an-integrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with an integrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -561,41 +603,50 @@
 
 
 
-<h1 id="the-harmonic-oscillator">The Harmonic Oscillator</h1>
-<h2 id="non-homogeneous-linear-differential-equations">Non homogeneous Linear differential equations</h2>
-<p>Consider the non-homogeneous second-order differential equation <span class="arithmatex">\(y\prime\prime + py\prime + qy = f(X)\)</span> where <span class="arithmatex">\(f(x) \neq 0\)</span><br />
-The general solution to this differential equation is given by <br />
-<span class="arithmatex">\(y(x) = y_{h}(x)+y_p(x)\)</span><br />
-Where <span class="arithmatex">\(y_h(x)\)</span> is the general solution to the complementary homogeneous equation <span class="arithmatex">\(y\prime\prime + py\prime +qy=0\)</span> and <span class="arithmatex">\(y_p(x)\)</span> is any particular solution. When <span class="arithmatex">\(f(x)\)</span> involves simple functions, we can attempt to 'guess' <span class="arithmatex">\(y_p(x)\)</span> by the method of undetermined coefficients<br />
-- If f(x) is a polynomial of degree <span class="arithmatex">\(n\)</span>, we let  <span class="arithmatex">\(y_p\)</span> be an arbitrary <span class="arithmatex">\(n\)</span>th degree polynomial with undetermined coefficient<br />
-- If f(x) contains an exponential <span class="arithmatex">\(e^kx\)</span>, then we try <span class="arithmatex">\(y_{p}=Ae^{kx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{R}\)</span> is  an undetermined coefficient<br />
-- if f(x) contains either <span class="arithmatex">\(cos(kx) = \Re(e^{ikx})\)</span> or <span class="arithmatex">\(sin(kx) = \Im(e^{ikx})\)</span>, we can instead solve for the real and imaginary solutions, respectively, of tghe complex equation <span class="arithmatex">\(y\prime\prime + my\prime+n\prime=e^{ikx}\)</span> by trying <span class="arithmatex">\(y_{p}=Ae^{ikx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{C}\)</span> is an undetermined coefficient.<br />
-If any term of the trial solution is already a solution of the complementary equation, multiply the trail solution by <span class="arithmatex">\(x\)</span> <br />
-Given a solution <span class="arithmatex">\(y_{n}(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)\)</span><br />
-<span class="arithmatex">\(y_{p}(x) = u(x)y_{1}(x)+v(x)y_{2}(x)\)</span><br />
-where the functions of <span class="arithmatex">\(u(x)\)</span> and <span class="arithmatex">\(v(x)\)</span> are given by<br />
-<span class="arithmatex">\(u(x)=-\int \frac{y_{2}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span><br />
-<span class="arithmatex">\(v(x)=\int \frac{y_{1}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span></p>
-<h1 id="simple-harmonic-motion">Simple Harmonic Motion</h1>
-<p>A particle is said to be in simple if it acceleration is directly proportional to its displacement<br />
-<span class="arithmatex">\(\ddot{x} = -\omega^{2}x\)</span><br />
-The constant <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the oscillation.<br />
-Consider a damped oscillator in which a resisting force proportional to velocity acts against an oscillating object.</p>
-<p>Consider a damped oscillator in which a resisting force is proportional to velocity acts against an oscillating object.<br />
-<span class="arithmatex">\(\ddot{x}=-\omega^{2}x- 2 \gamma \dot{x}\)</span><br />
-<span class="arithmatex">\(\ddot{x} + \omega^{2}x + 2 \gamma \dot{x} = 0\)</span><br />
-<span class="arithmatex">\(\lambda = \frac{-2\beta \pm \sqrt{4 \gamma - 4\omega^{2}}{2}}= -\gamma \pm \sqrt{\gamma^{2}-\omega^2}\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-omega^2\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-\omega^2\)</span><br />
-- If <span class="arithmatex">\(\omega^{2} &lt; \gamma^{2}\)</span>, we have real roots <span class="arithmatex">\(\lambda_1,\lambda_{2}\in\mathbb{R}\)</span><br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda_{1}t} + c_{2}e^{\lambda_{2}t}\)</span> <br />
-    - Which describes the motion of an overdamped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} = \gamma^{2}\)</span>, we have a repeated real root <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>:<br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda t} + c_{2}te^{\lambda t}\)</span> <br />
-    - This describes a critically damped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} &gt; \gamma^{2}\)</span>, we have a complex conjugate roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta \in \mathbb{C}\)</span><br />
-    - <span class="arithmatex">\(x(t)=c_{1}e^{\lambda t}cos(\beta t) + c_{2}e^{\lambda t}sin(\beta t)\)</span><br />
-    - This describes the motion of an underdamped oscillator</p>
+<h1 id="bode-diagrams">Bode Diagrams</h1>
+<p>A Bode plot is an approximate visualization of the frequency response, <span class="arithmatex">\(\tilde{H} (j\omega)\)</span>, of a system. It consists of straight line segments that are constructed based on the asymptotic properties of <span class="arithmatex">\(\tilde{H}(j\omega)\)</span>.</p>
+<p>A Bode plot is a combination of two plots:<br />
+- The <strong>Magnitude Plot</strong> is a plot of <span class="arithmatex">\(|\tilde{H}(j\omega)|_{dB} = 20log_{10}|\tilde{H}(j\omega)| dB\)</span><br />
+- The <strong>Phase Plot</strong> is a plot of <span class="arithmatex">\(\angle \tilde{H} (j\omega)\)</span> in degrees<br />
+Bode plots visualize the only positive frequency side of the frequency response. This suffices for real systems since <span class="arithmatex">\(|\tilde{H} |\)</span> and <span class="arithmatex">\(\angle \tilde{H} (j\omega)\)</span> are even and odd functions of <span class="arithmatex">\(\omega\)</span> respectively</p>
+<h2 id="construction-of-bode-plots">Construction of Bode Plots</h2>
+<p>The construction of straight-line Bode plots fora system begins with the system transfer function. To systematize the construction process, it is essential to express the system transfer function in a suitable form for each of the following cases:<br />
+- System without Integrator and differentiator<br />
+- Systems with Differentiators<br />
+- Systems with Integrators</p>
+<h5 id="system-transfer-function">System Transfer Function</h5>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\tilde{H} (s) = K\frac{(\frac{s}{z_{1}} + 1)(\frac{s}{z_{2}} + 1)...(\frac{s}{z_{M}} + 1)}{(\frac{s}{p_{1}} + 1)(\frac{s}{p_{2}} + 1)...{(\frac{s}{p_{N}} + 1)}}\)</span>\)</span><br />
+<span class="arithmatex">\(<span class="arithmatex">\(K = \frac{b_0}{a_-}\)</span>\)</span><br />
+By equating <span class="arithmatex">\(\lim\limits_{s\rightarrow 0} \tilde{H}(s)\)</span> </p>
+<h4 id="nth-order-system-with-neither-a-differentiator-nor-integrator">N<sup>th</sup>-order System with neither a differentiator nor integrator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{dc Gain}{\overbrace{K_{dc}}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{dc}= \tilde{H}(0)\)</span> is the dc gain of the system</p>
+<h4 id="nth-order-system-with-a-differentiator">N<sup>th</sup>-order System with a differentiator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{differentiator}{\overbrace{K_{d}s}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M-1} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M-1]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{d}\)</span> is the gain of the cascaded differentiator. In this case, the dc gain of the system is <span class="arithmatex">\(\tilde{H}(0) = 0\)</span></p>
+<h4 id="nth-order-system-with-an-integrator">N<sup>th</sup>-order System with an integrator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{integrator}{\overbrace{\frac{K_{i}}{s}}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N-1} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N-2]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{d}\)</span> is the gain of the cascaded differentiator. In this case, the dc gain of the system is <span class="arithmatex">\(\tilde{H}(0) = \infty\)</span></p>
+<p>Straight-line Bode plots for the following basic systems<br />
+- <span class="arithmatex">\(\tilde{H}(s)\)</span></p>
 
 
 

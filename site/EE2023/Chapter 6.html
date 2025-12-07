@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kennotlee.github.io/mynotes/MA1512/Chapter%203.html">
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%206.html">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>The Harmonic Oscillator - My Notes</title>
+        <title>Before we begin - My Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-harmonic-oscillator" class="md-skip">
+        <a href="#before-we-begin" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Harmonic Oscillator
+              Before we begin
             
           </span>
         </div>
@@ -530,23 +530,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#non-homogeneous-linear-differential-equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non homogeneous Linear differential equations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -561,41 +544,57 @@
 
 
 
-<h1 id="the-harmonic-oscillator">The Harmonic Oscillator</h1>
-<h2 id="non-homogeneous-linear-differential-equations">Non homogeneous Linear differential equations</h2>
-<p>Consider the non-homogeneous second-order differential equation <span class="arithmatex">\(y\prime\prime + py\prime + qy = f(X)\)</span> where <span class="arithmatex">\(f(x) \neq 0\)</span><br />
-The general solution to this differential equation is given by <br />
-<span class="arithmatex">\(y(x) = y_{h}(x)+y_p(x)\)</span><br />
-Where <span class="arithmatex">\(y_h(x)\)</span> is the general solution to the complementary homogeneous equation <span class="arithmatex">\(y\prime\prime + py\prime +qy=0\)</span> and <span class="arithmatex">\(y_p(x)\)</span> is any particular solution. When <span class="arithmatex">\(f(x)\)</span> involves simple functions, we can attempt to 'guess' <span class="arithmatex">\(y_p(x)\)</span> by the method of undetermined coefficients<br />
-- If f(x) is a polynomial of degree <span class="arithmatex">\(n\)</span>, we let  <span class="arithmatex">\(y_p\)</span> be an arbitrary <span class="arithmatex">\(n\)</span>th degree polynomial with undetermined coefficient<br />
-- If f(x) contains an exponential <span class="arithmatex">\(e^kx\)</span>, then we try <span class="arithmatex">\(y_{p}=Ae^{kx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{R}\)</span> is  an undetermined coefficient<br />
-- if f(x) contains either <span class="arithmatex">\(cos(kx) = \Re(e^{ikx})\)</span> or <span class="arithmatex">\(sin(kx) = \Im(e^{ikx})\)</span>, we can instead solve for the real and imaginary solutions, respectively, of tghe complex equation <span class="arithmatex">\(y\prime\prime + my\prime+n\prime=e^{ikx}\)</span> by trying <span class="arithmatex">\(y_{p}=Ae^{ikx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{C}\)</span> is an undetermined coefficient.<br />
-If any term of the trial solution is already a solution of the complementary equation, multiply the trail solution by <span class="arithmatex">\(x\)</span> <br />
-Given a solution <span class="arithmatex">\(y_{n}(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)\)</span><br />
-<span class="arithmatex">\(y_{p}(x) = u(x)y_{1}(x)+v(x)y_{2}(x)\)</span><br />
-where the functions of <span class="arithmatex">\(u(x)\)</span> and <span class="arithmatex">\(v(x)\)</span> are given by<br />
-<span class="arithmatex">\(u(x)=-\int \frac{y_{2}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span><br />
-<span class="arithmatex">\(v(x)=\int \frac{y_{1}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span></p>
-<h1 id="simple-harmonic-motion">Simple Harmonic Motion</h1>
-<p>A particle is said to be in simple if it acceleration is directly proportional to its displacement<br />
-<span class="arithmatex">\(\ddot{x} = -\omega^{2}x\)</span><br />
-The constant <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the oscillation.<br />
-Consider a damped oscillator in which a resisting force proportional to velocity acts against an oscillating object.</p>
-<p>Consider a damped oscillator in which a resisting force is proportional to velocity acts against an oscillating object.<br />
-<span class="arithmatex">\(\ddot{x}=-\omega^{2}x- 2 \gamma \dot{x}\)</span><br />
-<span class="arithmatex">\(\ddot{x} + \omega^{2}x + 2 \gamma \dot{x} = 0\)</span><br />
-<span class="arithmatex">\(\lambda = \frac{-2\beta \pm \sqrt{4 \gamma - 4\omega^{2}}{2}}= -\gamma \pm \sqrt{\gamma^{2}-\omega^2}\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-omega^2\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-\omega^2\)</span><br />
-- If <span class="arithmatex">\(\omega^{2} &lt; \gamma^{2}\)</span>, we have real roots <span class="arithmatex">\(\lambda_1,\lambda_{2}\in\mathbb{R}\)</span><br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda_{1}t} + c_{2}e^{\lambda_{2}t}\)</span> <br />
-    - Which describes the motion of an overdamped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} = \gamma^{2}\)</span>, we have a repeated real root <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>:<br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda t} + c_{2}te^{\lambda t}\)</span> <br />
-    - This describes a critically damped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} &gt; \gamma^{2}\)</span>, we have a complex conjugate roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta \in \mathbb{C}\)</span><br />
-    - <span class="arithmatex">\(x(t)=c_{1}e^{\lambda t}cos(\beta t) + c_{2}e^{\lambda t}sin(\beta t)\)</span><br />
-    - This describes the motion of an underdamped oscillator</p>
+<h1 id="before-we-begin">Before we begin</h1>
+<p>This is the second part of this module where it goes through systems instead of signals</p>
+<h1 id="systems-classification-and-s-domain-analysis">Systems - Classification and s-Domain Analysis</h1>
+<h2 id="systems">Systems</h2>
+<p>A system is a mathematical model of a physical process that relates the input (or excitation) signal to the output (or response) signal.</p>
+<p>With an input x(t) and an ouytput <span class="arithmatex">\(y(t)\)</span>, the system may be viewed as a transformation (or mapping) if <span class="arithmatex">\(x(t)\)</span> into <span class="arithmatex">\(y(t)\)</span>, mathematically expressed as<br />
+<span class="arithmatex">\(<span class="arithmatex">\(y(t) = T[x(t)]\)</span>\)</span></p>
+<p>Depicted by</p>
+<pre><code>y(t) = system(x(t))
+or
+x(t) -&gt; system(T) -&gt; y(t)
+</code></pre>
+<p>where <span class="arithmatex">\(T\)</span> is the operator representing some well-defined transformation rules.</p>
+<p>Systems may be classified into different categories according to their basic properties and the nature of their input and output signals</p>
+<h2 id="classification-of-systems">Classification of Systems</h2>
+<h3 id="system-with-memory-and-without-memory">System with Memory and without Memory</h3>
+<p>A system is said to be memoryless (or static) if its output at a given time is dependent on only the input at that time. Otherwise, the system is said to have memory (or to be dynamic).</p>
+<h3 id="causal-and-noncausal-systems">Causal and Noncausal Systems</h3>
+<p>A system is said to be causal (or non-anticipative) if it output, <span class="arithmatex">\(y(t)\)</span>, at the present time depends on only present and/or past values of its input, <span class="arithmatex">\(x(t)\)</span></p>
+<p>It is not possible for a causal system to produce an output before an input is applied to it.</p>
+<p>A system is noncausal (or anticipative) if its output, <span class="arithmatex">\(y(t)\)</span>, at the present time depends on future values of its input, <span class="arithmatex">\(x(t)\)</span></p>
+<h2 id="stable-and-unstable-systems">Stable and Unstable systems</h2>
+<p>A system is bounded-input/bounded-output (BIBO) stable if for every bounded input <span class="arithmatex">\(x(t)\)</span> where<br />
+<span class="arithmatex">\(<span class="arithmatex">\(|x(t)| \leq K; \forall t\)</span>\)</span><br />
+the system produce a bounded output <span class="arithmatex">\(y(t)\)</span> where<br />
+<span class="arithmatex">\(<span class="arithmatex">\(|y(t)| \leq L; \forall t\)</span>\)</span><br />
+in which K and L are finite positive constants</p>
+<h2 id="linear-and-nonlinear-system">Linear and Nonlinear System</h2>
+<p>A system is a linear system is one that satisfies the two conditions:<br />
+- Additivity: <span class="arithmatex">\(T[x_{1}(t) + x_{2}(t)]= T[x_{1}(t)] + T[x_{2}(t)] = y_{1}(t) + y_{2}(t)\)</span> <br />
+- Homogeneity: <span class="arithmatex">\(T[\alpha x(t)] = \alpha T[x(t)] = \alpha y(t)\)</span></p>
+<p>Another important property of linear system is that a zero input yields a zero output.</p>
+<h4 id="non-linear-systems">Non linear systems</h4>
+<p>Any other systems that does not satisfy the above conditions are non-linear systems</p>
+<h3 id="time-invariant-and-time-varying-systems">Time-invariant and Time-varying Systems</h3>
+<p>A system is time-invariant if a time shift (delay or advance) in the input signal, <span class="arithmatex">\(x(t)\)</span>, causes the same time shift in the output signal, <span class="arithmatex">\(y(t)\)</span>. Hence, time-invariant system has the property of <br />
+$$<br />
+T[x(t - \tau) = y(t - \tau)]<br />
+$$<br />
+For any real value of <span class="arithmatex">\(\tau\)</span> </p>
+<p>A time-varying system is one that does not satisfy the above equation</p>
+<h2 id="laplace-transform-analysis-of-systems">Laplace Transform Analysis of Systems</h2>
+<p>Not all signals and not many systems can be described by mathematics. However, it is possible to approximate their behavior based on physical or natural laws of physics. Even when it is possible to formulate a mathematical model to describe a signal or system, it is not always possible to formulate a mathematical model to describe a signal or system, it is not always the case that they can be solve easily.</p>
+<p>This course focuses on continuous-time, causal linear time-invariant (LTI) systems with memory, which we simply call <strong>LTI systems</strong></p>
+<p>LTI systems can be be described elegantly by mathematics. Their behaviors can be generalized easily and these lead to some nice properties that can be deduced for such systems, in many instances without having to solve their mathematical equations explicitly.</p>
+<p>A useful analysis tool for LTI systems is the Laplace transform. The Laplace transform <span class="arithmatex">\(\mathcal{L}\)</span> of a time-domain function <span class="arithmatex">\(f(t)\)</span> us defined by:<br />
+<span class="arithmatex">\(<span class="arithmatex">\(\tilde{F}(s) = \mathcal{L}\{f(t)\} = \int^{\infty}_{0} f(t)e^{-st}dt\)</span>\)</span><br />
+where <span class="arithmatex">\(s\)</span> is a complex variable. The inverse Laplace transform <span class="arithmatex">\(\mathcal{L}^{-1}\)</span> of <span class="arithmatex">\(\tilde{F}(s)\)</span> is given by the line integral<br />
+<span class="arithmatex">\(<span class="arithmatex">\(f(t) = \mathcal{L}^{-1}\{\tilde{F}(s)\} = \frac{1}{2 \pi j} \int^{\gamma + j\infty}_{\gamma - j\infty}\tilde{F}(s)e^{st}ds\)</span>\)</span><br />
+where the integration is done along the line <span class="arithmatex">\(Re[s] = \gamma\)</span> which lies in the region of convergence of <span class="arithmatex">\(\tilde{F}(s)\)</span>.</p>
+<p>The analysis of LTI systems described by a time-domain differential equation using Laplace transform often leads to s-domain expression of the form <span class="arithmatex">\(\tilde{F}(s) = \frac{\tilde{C}(s)}{\tilde{D}(s)}\)</span> are polynomials of <span class="arithmatex">\(s\)</span>. In this case we do not need to solve the above to find the inverse Laplace transform of <span class="arithmatex">\(\tilde{F} (s)\)</span>. Instead, we expand <span class="arithmatex">\(\tilde{F}(s)\)</span> into a sum of partial fractions where the inverse Laplace transform of each of the partial fractions can be obtained directly from a standard Laplace Transform table.</p>
 
 
 

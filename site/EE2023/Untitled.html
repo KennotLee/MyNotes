@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kennotlee.github.io/mynotes/MA1512/Chapter%203.html">
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Untitled.html">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>The Harmonic Oscillator - My Notes</title>
+        <title>Untitled - My Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-harmonic-oscillator" class="md-skip">
+        <a href="#lab-2-fuck-brain-damaage" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Harmonic Oscillator
+              Untitled
             
           </span>
         </div>
@@ -527,8 +527,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -537,9 +535,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#non-homogeneous-linear-differential-equations" class="md-nav__link">
+  <a href="#lab-2-fuck-brain-damaage" class="md-nav__link">
     <span class="md-ellipsis">
-      Non homogeneous Linear differential equations
+      Lab 2 fuck brain damaage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6dd" class="md-nav__link">
+    <span class="md-ellipsis">
+      6dd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6d" class="md-nav__link">
+    <span class="md-ellipsis">
+      6d
     </span>
   </a>
   
@@ -561,41 +577,35 @@
 
 
 
-<h1 id="the-harmonic-oscillator">The Harmonic Oscillator</h1>
-<h2 id="non-homogeneous-linear-differential-equations">Non homogeneous Linear differential equations</h2>
-<p>Consider the non-homogeneous second-order differential equation <span class="arithmatex">\(y\prime\prime + py\prime + qy = f(X)\)</span> where <span class="arithmatex">\(f(x) \neq 0\)</span><br />
-The general solution to this differential equation is given by <br />
-<span class="arithmatex">\(y(x) = y_{h}(x)+y_p(x)\)</span><br />
-Where <span class="arithmatex">\(y_h(x)\)</span> is the general solution to the complementary homogeneous equation <span class="arithmatex">\(y\prime\prime + py\prime +qy=0\)</span> and <span class="arithmatex">\(y_p(x)\)</span> is any particular solution. When <span class="arithmatex">\(f(x)\)</span> involves simple functions, we can attempt to 'guess' <span class="arithmatex">\(y_p(x)\)</span> by the method of undetermined coefficients<br />
-- If f(x) is a polynomial of degree <span class="arithmatex">\(n\)</span>, we let  <span class="arithmatex">\(y_p\)</span> be an arbitrary <span class="arithmatex">\(n\)</span>th degree polynomial with undetermined coefficient<br />
-- If f(x) contains an exponential <span class="arithmatex">\(e^kx\)</span>, then we try <span class="arithmatex">\(y_{p}=Ae^{kx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{R}\)</span> is  an undetermined coefficient<br />
-- if f(x) contains either <span class="arithmatex">\(cos(kx) = \Re(e^{ikx})\)</span> or <span class="arithmatex">\(sin(kx) = \Im(e^{ikx})\)</span>, we can instead solve for the real and imaginary solutions, respectively, of tghe complex equation <span class="arithmatex">\(y\prime\prime + my\prime+n\prime=e^{ikx}\)</span> by trying <span class="arithmatex">\(y_{p}=Ae^{ikx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{C}\)</span> is an undetermined coefficient.<br />
-If any term of the trial solution is already a solution of the complementary equation, multiply the trail solution by <span class="arithmatex">\(x\)</span> <br />
-Given a solution <span class="arithmatex">\(y_{n}(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)\)</span><br />
-<span class="arithmatex">\(y_{p}(x) = u(x)y_{1}(x)+v(x)y_{2}(x)\)</span><br />
-where the functions of <span class="arithmatex">\(u(x)\)</span> and <span class="arithmatex">\(v(x)\)</span> are given by<br />
-<span class="arithmatex">\(u(x)=-\int \frac{y_{2}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span><br />
-<span class="arithmatex">\(v(x)=\int \frac{y_{1}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span></p>
-<h1 id="simple-harmonic-motion">Simple Harmonic Motion</h1>
-<p>A particle is said to be in simple if it acceleration is directly proportional to its displacement<br />
-<span class="arithmatex">\(\ddot{x} = -\omega^{2}x\)</span><br />
-The constant <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the oscillation.<br />
-Consider a damped oscillator in which a resisting force proportional to velocity acts against an oscillating object.</p>
-<p>Consider a damped oscillator in which a resisting force is proportional to velocity acts against an oscillating object.<br />
-<span class="arithmatex">\(\ddot{x}=-\omega^{2}x- 2 \gamma \dot{x}\)</span><br />
-<span class="arithmatex">\(\ddot{x} + \omega^{2}x + 2 \gamma \dot{x} = 0\)</span><br />
-<span class="arithmatex">\(\lambda = \frac{-2\beta \pm \sqrt{4 \gamma - 4\omega^{2}}{2}}= -\gamma \pm \sqrt{\gamma^{2}-\omega^2}\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-omega^2\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-\omega^2\)</span><br />
-- If <span class="arithmatex">\(\omega^{2} &lt; \gamma^{2}\)</span>, we have real roots <span class="arithmatex">\(\lambda_1,\lambda_{2}\in\mathbb{R}\)</span><br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda_{1}t} + c_{2}e^{\lambda_{2}t}\)</span> <br />
-    - Which describes the motion of an overdamped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} = \gamma^{2}\)</span>, we have a repeated real root <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>:<br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda t} + c_{2}te^{\lambda t}\)</span> <br />
-    - This describes a critically damped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} &gt; \gamma^{2}\)</span>, we have a complex conjugate roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta \in \mathbb{C}\)</span><br />
-    - <span class="arithmatex">\(x(t)=c_{1}e^{\lambda t}cos(\beta t) + c_{2}e^{\lambda t}sin(\beta t)\)</span><br />
-    - This describes the motion of an underdamped oscillator</p>
+  <h1>Untitled</h1>
+
+<div class="arithmatex">\[c_{k} = \frac{1}{T} \int_{-T_{0}/2}^{T_{0}/2} x_p(t) e^{j 2 \pi k t / T_0} \, dt$$
+![[Pasted image 20250922232800.png]]
+$$\frac{A}{j 2  \pi k}(1 - cos(\pi k))$$
+$$\frac{A}{j 2  \pi k}(1 - e^{j\pi k} - e^{-j\pi k} + 1)$$
+$$-\frac{A}{T_{0}}\Bigg[ \frac{e^{-j 2 \pi k t /T_0) }}{-j2\pi k/T_{0}}\Bigg]^0_{-T_{0}/2}$$ $$\frac{A}{T_{0}}\Bigg[ \frac{e^ {-j 2 \pi k t /T_0}}{-j2\pi k/T_{0}}\Bigg]^{T_0/2}_{0}\]</div>
+<p>ck​=ADe−jπkDsinc(kD)=2A​e−jπk/2sinc(2k​).<br />
+<span class="arithmatex">\(<span class="arithmatex">\(c_{k}= ADde^{-j \pi kD} sinc(kD) = \frac{A}{2}e^{-j \pi k /2}sinc(\frac{k}{2})\)</span>\)</span></p>
+<h3 id="lab-2-fuck-brain-damaage">Lab 2 fuck brain damaage</h3>
+<p>1.<br />
+<span class="arithmatex">\(<span class="arithmatex">\(sin (2 \pi f) + sin(40 \pi f) = sin\left(\frac{42 \pi f}{2}\right)cos\left(\frac{38 \pi f}{2}\right) + sin(40 \pi f)\)</span>\)</span><br />
+2.<br />
+<span class="arithmatex">\(<span class="arithmatex">\(= sin(21 \pi f) cos(19 \pi f) + sin(40\pi f)\)</span>\)</span><br />
+3.<br />
+<span class="arithmatex">\(<span class="arithmatex">\(= \frac{1}{2j}(e^{2 \pi j} - e^{-2 \pi j} + 2e^{40 \pi j} + 2e^{-40 \pi j})\)</span>\)</span></p>
+<div class="arithmatex">\[T = \frac{1}{f}$$
+$$T_{p} = \frac{1}{19}, \frac{1}{20}, \frac{1}{21}\]</div>
+<div class="arithmatex">\[c_{-1} = \frac{j}{2}, c_{1} = -\frac{j}{2}$$
+$$c_{-19} = \frac{1}{2}, c_{19} = -\frac{1}{2}$$ $$c_{-20} = j, c_{20} = -j$$
+$$c_{21} = -\frac{1}{2}, c_{-21}=\frac{1}{2}\]</div>
+<h3 id="6dd">6dd</h3>
+<div class="arithmatex">\[c_{-1} = \frac{1}{2}, c_{1} = \frac{1}{2}$$
+$$c_{-19} = \frac{1}{2}, c_{19} = \frac{1}{2}$$ $$c_{-20} = 1, c_{20} = 1$$
+$$c_{21} = \frac{1}{2}, c_{-21}=\frac{1}{2}\]</div>
+<h3 id="6d">6d</h3>
+<div class="arithmatex">\[\angle c_{-1} = \frac{\pi}{2}, \angle c_{1} = -\frac{\pi}{2}$$
+$$\angle c_{-19} = 0, \angle c_{19} = -\pi$$ $$\angle c_{-20} = \frac{\pi}{2}, \angle c_{20} = -\frac{\pi}{2}$$
+$$\angle c_{21} = \pi, \angle c_{-21}=0\]</div>
 
 
 

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kennotlee.github.io/mynotes/MA1512/Chapter%203.html">
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%202.html">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>The Harmonic Oscillator - My Notes</title>
+        <title>Time-domain Operations & the Dirac Impulse - My Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-harmonic-oscillator" class="md-skip">
+        <a href="#time-domain-operations-the-dirac-impulse" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Harmonic Oscillator
+              Time-domain Operations &amp; the Dirac Impulse
             
           </span>
         </div>
@@ -537,9 +537,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#non-homogeneous-linear-differential-equations" class="md-nav__link">
+  <a href="#time-scaling" class="md-nav__link">
     <span class="md-ellipsis">
-      Non homogeneous Linear differential equations
+      Time Scaling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-shifting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Shifting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dirac-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirac-\(\delta\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dirac-delta-comb-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dirac-\(\delta\) Comb Function
     </span>
   </a>
   
@@ -561,41 +597,44 @@
 
 
 
-<h1 id="the-harmonic-oscillator">The Harmonic Oscillator</h1>
-<h2 id="non-homogeneous-linear-differential-equations">Non homogeneous Linear differential equations</h2>
-<p>Consider the non-homogeneous second-order differential equation <span class="arithmatex">\(y\prime\prime + py\prime + qy = f(X)\)</span> where <span class="arithmatex">\(f(x) \neq 0\)</span><br />
-The general solution to this differential equation is given by <br />
-<span class="arithmatex">\(y(x) = y_{h}(x)+y_p(x)\)</span><br />
-Where <span class="arithmatex">\(y_h(x)\)</span> is the general solution to the complementary homogeneous equation <span class="arithmatex">\(y\prime\prime + py\prime +qy=0\)</span> and <span class="arithmatex">\(y_p(x)\)</span> is any particular solution. When <span class="arithmatex">\(f(x)\)</span> involves simple functions, we can attempt to 'guess' <span class="arithmatex">\(y_p(x)\)</span> by the method of undetermined coefficients<br />
-- If f(x) is a polynomial of degree <span class="arithmatex">\(n\)</span>, we let  <span class="arithmatex">\(y_p\)</span> be an arbitrary <span class="arithmatex">\(n\)</span>th degree polynomial with undetermined coefficient<br />
-- If f(x) contains an exponential <span class="arithmatex">\(e^kx\)</span>, then we try <span class="arithmatex">\(y_{p}=Ae^{kx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{R}\)</span> is  an undetermined coefficient<br />
-- if f(x) contains either <span class="arithmatex">\(cos(kx) = \Re(e^{ikx})\)</span> or <span class="arithmatex">\(sin(kx) = \Im(e^{ikx})\)</span>, we can instead solve for the real and imaginary solutions, respectively, of tghe complex equation <span class="arithmatex">\(y\prime\prime + my\prime+n\prime=e^{ikx}\)</span> by trying <span class="arithmatex">\(y_{p}=Ae^{ikx}\)</span>, where <span class="arithmatex">\(A \in \mathbb{C}\)</span> is an undetermined coefficient.<br />
-If any term of the trial solution is already a solution of the complementary equation, multiply the trail solution by <span class="arithmatex">\(x\)</span> <br />
-Given a solution <span class="arithmatex">\(y_{n}(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)\)</span><br />
-<span class="arithmatex">\(y_{p}(x) = u(x)y_{1}(x)+v(x)y_{2}(x)\)</span><br />
-where the functions of <span class="arithmatex">\(u(x)\)</span> and <span class="arithmatex">\(v(x)\)</span> are given by<br />
-<span class="arithmatex">\(u(x)=-\int \frac{y_{2}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span><br />
-<span class="arithmatex">\(v(x)=\int \frac{y_{1}f}{y_{1}y_{2}\prime - y_{1}\prime y_{2}}dx\)</span></p>
-<h1 id="simple-harmonic-motion">Simple Harmonic Motion</h1>
-<p>A particle is said to be in simple if it acceleration is directly proportional to its displacement<br />
-<span class="arithmatex">\(\ddot{x} = -\omega^{2}x\)</span><br />
-The constant <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the oscillation.<br />
-Consider a damped oscillator in which a resisting force proportional to velocity acts against an oscillating object.</p>
-<p>Consider a damped oscillator in which a resisting force is proportional to velocity acts against an oscillating object.<br />
-<span class="arithmatex">\(\ddot{x}=-\omega^{2}x- 2 \gamma \dot{x}\)</span><br />
-<span class="arithmatex">\(\ddot{x} + \omega^{2}x + 2 \gamma \dot{x} = 0\)</span><br />
-<span class="arithmatex">\(\lambda = \frac{-2\beta \pm \sqrt{4 \gamma - 4\omega^{2}}{2}}= -\gamma \pm \sqrt{\gamma^{2}-\omega^2}\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-omega^2\)</span><br />
-The nature of the object's motion now depends on the value of the discriminant <span class="arithmatex">\(\Delta = \gamma^2-\omega^2\)</span><br />
-- If <span class="arithmatex">\(\omega^{2} &lt; \gamma^{2}\)</span>, we have real roots <span class="arithmatex">\(\lambda_1,\lambda_{2}\in\mathbb{R}\)</span><br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda_{1}t} + c_{2}e^{\lambda_{2}t}\)</span> <br />
-    - Which describes the motion of an overdamped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} = \gamma^{2}\)</span>, we have a repeated real root <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>:<br />
-    - <span class="arithmatex">\(x(t) = c_{1}e^{\lambda t} + c_{2}te^{\lambda t}\)</span> <br />
-    - This describes a critically damped oscillator<br />
-- If <span class="arithmatex">\(\omega^{2} &gt; \gamma^{2}\)</span>, we have a complex conjugate roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta \in \mathbb{C}\)</span><br />
-    - <span class="arithmatex">\(x(t)=c_{1}e^{\lambda t}cos(\beta t) + c_{2}e^{\lambda t}sin(\beta t)\)</span><br />
-    - This describes the motion of an underdamped oscillator</p>
+<h1 id="time-domain-operations-the-dirac-impulse">Time-domain Operations &amp; the Dirac Impulse</h1>
+<h2 id="time-scaling">Time Scaling</h2>
+<p>Time scaling of a signal $x(t) is achieved by replacing the time variable <span class="arithmatex">\(t\)</span> by <span class="arithmatex">\(\alpha t\)</span>, where <span class="arithmatex">\(\alpha\)</span> is a real-value time-scaling factor<br />
+- <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span> expansion of <span class="arithmatex">\(x(t)\)</span> along the time axis<br />
+- <span class="arithmatex">\(\alpha &gt; 1\)</span> contraction<br />
+- <span class="arithmatex">\(\alpha = -1\)</span> time reversal of <span class="arithmatex">\(x(t)\)</span></p>
+<h2 id="time-shifting">Time Shifting</h2>
+<p>Time-shifting of a signal <span class="arithmatex">\(x(t)\)</span> is achieved by replacing the time variable <span class="arithmatex">\(t\)</span> by <span class="arithmatex">\((t - \beta)\)</span>, where <span class="arithmatex">\(\beta\)</span> is a real-value time-shifting factor</p>
+<p><span class="arithmatex">\(\beta &gt; 0:\)</span> delaying <span class="arithmatex">\(x(t)\)</span> by <span class="arithmatex">\(\beta\)</span> unit of time<br />
+<span class="arithmatex">\(\beta &lt; 0:\)</span> Advancing <span class="arithmatex">\(x(t)\)</span> by <span class="arithmatex">\(\beta\)</span> unit of time</p>
+<h2 id="convolution">Convolution</h2>
+<p>The convolution of two other signals, <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span>, is efnied by <br />
+<span class="arithmatex">\(<span class="arithmatex">\(\int_{-\infty}^{\infty} x(\alpha) y(t - \alpha) d\alpha = x(t)  \ast y(t)\)</span>\)</span></p>
+<p>Convolution is:<br />
+- Commutative: <span class="arithmatex">\(x(t) \ast y(t) =  y(t) \ast x(t)\)</span><br />
+- Associative: <span class="arithmatex">\([w(t) \ast x(t)] \ast y(t) = w(t) \ast [y(t) \ast x(t)]\)</span><br />
+- Distributive: <span class="arithmatex">\(w(t) \ast [x(t) \ast y(t)] = w(t) \ast x(t) + w(t) \ast y(t)\)</span> </p>
+<h2 id="dirac-delta">Dirac-<span class="arithmatex">\(\delta\)</span></h2>
+<p>The dirac-<span class="arithmatex">\(\delta\)</span> function, also known as unit impulse is defined by:<br />
+$$<br />
+\int^{\infty}<em>{-\infty}u(\alpha)u(t - \alpha)d\alpha = \begin{cases}<br />
+\text{1} &amp; \text{t &lt; 0}  \<br />
+\text{0} &amp; \text{t <span class="arithmatex">\(\geq\)</span> 1}<br />
+\end{cases}<br />
+$$ and <br />
+$$<br />
+\int^\epsilon</em>{-\epsilon}  \delta(t)d(t) = 1; \forall_{\epsilon} = 0</p>
+<p>$$</p>
+<p>properties of <span class="arithmatex">\(\delta(t)\)</span><br />
+1. Symmetry: <span class="arithmatex">\(\delta(t) = \delta(-t)\)</span><br />
+2. Sampling: <span class="arithmatex">\(x(t)\delta(t-\lambda) = x(\lambda)\delta(t-\lambda)\)</span><br />
+3. Sifting <span class="arithmatex">\(\int^{\infty}_{-\infty}x(t)\delta(t-\lambda)dt = x(\lambda)\int^{\infty}_{-\infty}dt = x(\lambda)\)</span><br />
+4. Replication: <span class="arithmatex">\(x(t) \ast \delta (t-\lambda) = \int^{\infty}_{-\infty}x(\zeta)\delta(t-\zeta-\lambda)d\zeta =\int^{\infty}_{-\infty}x(\zeta)\delta(\zeta-(t-\lambda))d\zeta = x(t-\lambda)\)</span><br />
+    1. Applying symmetry property and applying sifting property</p>
+<h2 id="the-dirac-delta-comb-function">The Dirac-<span class="arithmatex">\(\delta\)</span> Comb Function</h2>
+<p>$$<br />
+\sum\limits^{\infty}_{n = -\infty}\delta(t-nT) = ...... + \delta(t + 2T) + \delta(t + T) + \delta(t) + \delta(t - T) + \delta(t - 2T) + ......<br />
+$$ ![[Pasted image 20250822225540.png]]</p>
 
 
 
