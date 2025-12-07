@@ -8,22 +8,24 @@
       
       
       
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%208.html">
       
       
       
-      <link rel="icon" href="/mynotes/assets/images/favicon.png">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>My Notes</title>
+        <title>Bode Diagrams - My Notes</title>
       
     
     
-      <link rel="stylesheet" href="/mynotes/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/mynotes/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("/mynotes/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bode-diagrams" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/mynotes/index.html" title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
+    <a href="../index.html" title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -99,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Bode Diagrams
             
           </span>
         </div>
@@ -198,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -217,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/about.md" class="md-tabs__link">
+      <a href="../about.md" class="md-tabs__link">
         
   
   
@@ -236,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/navigation.html" class="md-tabs__link">
+      <a href="../navigation.html" class="md-tabs__link">
         
   
   
@@ -257,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/mynotes/topic1.md" class="md-tabs__link">
+        <a href="../topic1.md" class="md-tabs__link">
           
   
   
@@ -275,7 +282,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/contact.md" class="md-tabs__link">
+      <a href="../contact.md" class="md-tabs__link">
         
   
   
@@ -310,7 +317,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/mynotes/index.html" title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
+    <a href="../index.html" title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -328,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -350,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/about.md" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         
   
   
@@ -372,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -435,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/topic1.md" class="md-nav__link">
+      <a href="../topic1.md" class="md-nav__link">
         
   
   
@@ -458,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/topic2.md" class="md-nav__link">
+      <a href="../topic2.md" class="md-nav__link">
         
   
   
@@ -488,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/contact.md" class="md-nav__link">
+      <a href="../contact.md" class="md-nav__link">
         
   
   
@@ -520,6 +527,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construction-of-bode-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construction of Bode Plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construction of Bode Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-transfer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Transfer Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-neither-a-differentiator-nor-integrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with neither a differentiator nor integrator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-a-differentiator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with a differentiator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth-order-system-with-an-integrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nth-order System with an integrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,8 +599,67 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="bode-diagrams">Bode Diagrams</h1>
+<p>A Bode plot is an approximate visualization of the frequency response, <span class="arithmatex">\(\tilde{H} (j\omega)\)</span>, of a system. It consists of straight line segments that are constructed based on the asymptotic properties of <span class="arithmatex">\(\tilde{H}(j\omega)\)</span>.</p>
+<p>A Bode plot is a combination of two plots:<br />
+- The <strong>Magnitude Plot</strong> is a plot of <span class="arithmatex">\(|\tilde{H}(j\omega)|_{dB} = 20log_{10}|\tilde{H}(j\omega)| dB\)</span><br />
+- The <strong>Phase Plot</strong> is a plot of <span class="arithmatex">\(\angle \tilde{H} (j\omega)\)</span> in degrees<br />
+Bode plots visualize the only positive frequency side of the frequency response. This suffices for real systems since <span class="arithmatex">\(|\tilde{H} |\)</span> and <span class="arithmatex">\(\angle \tilde{H} (j\omega)\)</span> are even and odd functions of <span class="arithmatex">\(\omega\)</span> respectively</p>
+<h2 id="construction-of-bode-plots">Construction of Bode Plots</h2>
+<p>The construction of straight-line Bode plots fora system begins with the system transfer function. To systematize the construction process, it is essential to express the system transfer function in a suitable form for each of the following cases:<br />
+- System without Integrator and differentiator<br />
+- Systems with Differentiators<br />
+- Systems with Integrators</p>
+<h5 id="system-transfer-function">System Transfer Function</h5>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\tilde{H} (s) = K\frac{(\frac{s}{z_{1}} + 1)(\frac{s}{z_{2}} + 1)...(\frac{s}{z_{M}} + 1)}{(\frac{s}{p_{1}} + 1)(\frac{s}{p_{2}} + 1)...{(\frac{s}{p_{N}} + 1)}}\)</span>\)</span><br />
+<span class="arithmatex">\(<span class="arithmatex">\(K = \frac{b_0}{a_-}\)</span>\)</span><br />
+By equating <span class="arithmatex">\(\lim\limits_{s\rightarrow 0} \tilde{H}(s)\)</span> </p>
+<h4 id="nth-order-system-with-neither-a-differentiator-nor-integrator">N<sup>th</sup>-order System with neither a differentiator nor integrator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{dc Gain}{\overbrace{K_{dc}}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{dc}= \tilde{H}(0)\)</span> is the dc gain of the system</p>
+<h4 id="nth-order-system-with-a-differentiator">N<sup>th</sup>-order System with a differentiator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{differentiator}{\overbrace{K_{d}s}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M-1} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M-1]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{d}\)</span> is the gain of the cascaded differentiator. In this case, the dc gain of the system is <span class="arithmatex">\(\tilde{H}(0) = 0\)</span></p>
+<h4 id="nth-order-system-with-an-integrator">N<sup>th</sup>-order System with an integrator</h4>
+<p>Rewrite the System Transfer as:<br />
+$$<br />
+\tilde{H}(s) = \overset{integrator}{\overbrace{\frac{K_{i}}{s}}} \cdot \frac{(s/Z_{1} + 1) (s/Z_{2} + 1)...(s/Z_{M} + 1)}{(s/p_{1} + 1)(s/p_{2} + 1)...(s/p_{N-1} + 1)}<br />
+$$<br />
+Where <span class="arithmatex">\(z_{m} \neq 0 \qquad \forall m \in [1, M]\)</span> <br />
+and<br />
+<span class="arithmatex">\(p_{n} \neq 0 \qquad \forall n \in [1, N-2]\)</span></p>
+<p>Where <span class="arithmatex">\(K_{d}\)</span> is the gain of the cascaded differentiator. In this case, the dc gain of the system is <span class="arithmatex">\(\tilde{H}(0) = \infty\)</span></p>
+<p>Straight-line Bode plots for the following basic systems<br />
+- <span class="arithmatex">\(\tilde{H}(s)\)</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -574,12 +701,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/mynotes/", "features": ["navigation.tabs", "navigation.top", "palette.toggle"], "search": "/mynotes/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "palette.toggle"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/mynotes/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="/mynotes/js/math.js"></script>
+        <script src="../js/math.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

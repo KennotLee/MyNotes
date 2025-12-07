@@ -8,22 +8,24 @@
       
       
       
+        <link rel="canonical" href="https://kennotlee.github.io/mynotes/EE2023/Chapter%202.html">
       
       
       
-      <link rel="icon" href="/mynotes/assets/images/favicon.png">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>My Notes</title>
+        <title>Time-domain Operations & the Dirac Impulse - My Notes</title>
       
     
     
-      <link rel="stylesheet" href="/mynotes/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/mynotes/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("/mynotes/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#time-domain-operations-the-dirac-impulse" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/mynotes/index.html" title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
+    <a href="../index.html" title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -99,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Time-domain Operations &amp; the Dirac Impulse
             
           </span>
         </div>
@@ -198,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -217,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/about.md" class="md-tabs__link">
+      <a href="../about.md" class="md-tabs__link">
         
   
   
@@ -236,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/navigation.html" class="md-tabs__link">
+      <a href="../navigation.html" class="md-tabs__link">
         
   
   
@@ -257,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/mynotes/topic1.md" class="md-tabs__link">
+        <a href="../topic1.md" class="md-tabs__link">
           
   
   
@@ -275,7 +282,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mynotes/contact.md" class="md-tabs__link">
+      <a href="../contact.md" class="md-tabs__link">
         
   
   
@@ -310,7 +317,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/mynotes/index.html" title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
+    <a href="../index.html" title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -328,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -350,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/about.md" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         
   
   
@@ -372,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -435,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/topic1.md" class="md-nav__link">
+      <a href="../topic1.md" class="md-nav__link">
         
   
   
@@ -458,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/topic2.md" class="md-nav__link">
+      <a href="../topic2.md" class="md-nav__link">
         
   
   
@@ -488,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mynotes/contact.md" class="md-nav__link">
+      <a href="../contact.md" class="md-nav__link">
         
   
   
@@ -520,6 +527,61 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#time-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Scaling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-shifting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Shifting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dirac-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirac-\(\delta\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dirac-delta-comb-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dirac-\(\delta\) Comb Function
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,8 +593,61 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="time-domain-operations-the-dirac-impulse">Time-domain Operations &amp; the Dirac Impulse</h1>
+<h2 id="time-scaling">Time Scaling</h2>
+<p>Time scaling of a signal $x(t) is achieved by replacing the time variable <span class="arithmatex">\(t\)</span> by <span class="arithmatex">\(\alpha t\)</span>, where <span class="arithmatex">\(\alpha\)</span> is a real-value time-scaling factor<br />
+- <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span> expansion of <span class="arithmatex">\(x(t)\)</span> along the time axis<br />
+- <span class="arithmatex">\(\alpha &gt; 1\)</span> contraction<br />
+- <span class="arithmatex">\(\alpha = -1\)</span> time reversal of <span class="arithmatex">\(x(t)\)</span></p>
+<h2 id="time-shifting">Time Shifting</h2>
+<p>Time-shifting of a signal <span class="arithmatex">\(x(t)\)</span> is achieved by replacing the time variable <span class="arithmatex">\(t\)</span> by <span class="arithmatex">\((t - \beta)\)</span>, where <span class="arithmatex">\(\beta\)</span> is a real-value time-shifting factor</p>
+<p><span class="arithmatex">\(\beta &gt; 0:\)</span> delaying <span class="arithmatex">\(x(t)\)</span> by <span class="arithmatex">\(\beta\)</span> unit of time<br />
+<span class="arithmatex">\(\beta &lt; 0:\)</span> Advancing <span class="arithmatex">\(x(t)\)</span> by <span class="arithmatex">\(\beta\)</span> unit of time</p>
+<h2 id="convolution">Convolution</h2>
+<p>The convolution of two other signals, <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span>, is efnied by <br />
+<span class="arithmatex">\(<span class="arithmatex">\(\int_{-\infty}^{\infty} x(\alpha) y(t - \alpha) d\alpha = x(t)  \ast y(t)\)</span>\)</span></p>
+<p>Convolution is:<br />
+- Commutative: <span class="arithmatex">\(x(t) \ast y(t) =  y(t) \ast x(t)\)</span><br />
+- Associative: <span class="arithmatex">\([w(t) \ast x(t)] \ast y(t) = w(t) \ast [y(t) \ast x(t)]\)</span><br />
+- Distributive: <span class="arithmatex">\(w(t) \ast [x(t) \ast y(t)] = w(t) \ast x(t) + w(t) \ast y(t)\)</span> </p>
+<h2 id="dirac-delta">Dirac-<span class="arithmatex">\(\delta\)</span></h2>
+<p>The dirac-<span class="arithmatex">\(\delta\)</span> function, also known as unit impulse is defined by:<br />
+$$<br />
+\int^{\infty}<em>{-\infty}u(\alpha)u(t - \alpha)d\alpha = \begin{cases}<br />
+\text{1} &amp; \text{t &lt; 0}  \<br />
+\text{0} &amp; \text{t <span class="arithmatex">\(\geq\)</span> 1}<br />
+\end{cases}<br />
+$$ and <br />
+$$<br />
+\int^\epsilon</em>{-\epsilon}  \delta(t)d(t) = 1; \forall_{\epsilon} = 0</p>
+<p>$$</p>
+<p>properties of <span class="arithmatex">\(\delta(t)\)</span><br />
+1. Symmetry: <span class="arithmatex">\(\delta(t) = \delta(-t)\)</span><br />
+2. Sampling: <span class="arithmatex">\(x(t)\delta(t-\lambda) = x(\lambda)\delta(t-\lambda)\)</span><br />
+3. Sifting <span class="arithmatex">\(\int^{\infty}_{-\infty}x(t)\delta(t-\lambda)dt = x(\lambda)\int^{\infty}_{-\infty}dt = x(\lambda)\)</span><br />
+4. Replication: <span class="arithmatex">\(x(t) \ast \delta (t-\lambda) = \int^{\infty}_{-\infty}x(\zeta)\delta(t-\zeta-\lambda)d\zeta =\int^{\infty}_{-\infty}x(\zeta)\delta(\zeta-(t-\lambda))d\zeta = x(t-\lambda)\)</span><br />
+    1. Applying symmetry property and applying sifting property</p>
+<h2 id="the-dirac-delta-comb-function">The Dirac-<span class="arithmatex">\(\delta\)</span> Comb Function</h2>
+<p>$$<br />
+\sum\limits^{\infty}_{n = -\infty}\delta(t-nT) = ...... + \delta(t + 2T) + \delta(t + T) + \delta(t) + \delta(t - T) + \delta(t - 2T) + ......<br />
+$$ ![[Pasted image 20250822225540.png]]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -574,12 +689,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/mynotes/", "features": ["navigation.tabs", "navigation.top", "palette.toggle"], "search": "/mynotes/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "palette.toggle"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/mynotes/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="/mynotes/js/math.js"></script>
+        <script src="../js/math.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
